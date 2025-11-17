@@ -7,7 +7,7 @@ exports.createNewContact = async (req, res) => {
   if (!name || !email || !service) {
     return res
       .status(400)
-      .json({ msg: "Please provide all the required fields" });
+      .json({ status: 400, msg: "Please provide all the required fields" });
   }
 
   const newContact = await Contact.create({
@@ -20,5 +20,5 @@ exports.createNewContact = async (req, res) => {
 
   return res
     .status(201)
-    .json({ msg: "New contact has been created successfully" });
+    .json({ status: 201, msg: "New contact has been created successfully" });
 };

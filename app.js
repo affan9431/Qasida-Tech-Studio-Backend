@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://qasidatechstudio.com"],
+    origin: ["http://localhost:5173", "https://qasidatechstudio.com", "https://qasida-tech-studio.netlify.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type"],
   })
