@@ -38,5 +38,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/contact", contactRoute);
+app.use("/api/newsletter", require("./routes/NewsletterRoute"));
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
